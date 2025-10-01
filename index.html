@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Rotisería</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">La Rotisería</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#quienes">Quiénes Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#promos">Promociones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#delivery">Delivery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item ms-3">
+            <button id="cartBtn" class="btn btn-outline-primary position-relative">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cartCount" class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">0</span>
+            </button>
+          </li>
+          <li class="nav-item ms-2">
+            <button id="loginBtn" class="btn btn-warning">Iniciar Sesión</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero d-flex justify-content-center">
+    <div class="container text-center">
+      <h1 class="animate__animated animate__fadeInDown">El sabor de siempre, como en casa</h1>
+      <p class="lead animate__animated animate__fadeInUp">Pollos, carnes, ensaladas, empanadas, postres y más</p>
+      <a href="#productos" class="btn btn-warning btn-lg mt-3">Ver Carta</a>
+    </div>
+  </section>
+
+  <!-- Quienes Somos -->
+  <section id="quienes" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Quiénes Somos</h2>
+      <p class="text-center">En La Rotisería cocinamos como en casa. Ingredientes frescos, recetas tradicionales y mucho cariño.</p>
+    </div>
+  </section>
+
+  <!-- Productos con categorías -->
+  <section id="productos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Nuestros Productos</h2>
+
+      <!-- Pollos -->
+      <h3 class="mt-4 mb-3">Pollos</h3>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="p1" data-name="Pollo al Spiedo" data-price="9990">
+            <img src="https://source.unsplash.com/400x300/?rotisserie-chicken" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Pollo al Spiedo</h5>
+              <p>CLP$ 9.990</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="p2" data-name="Medio Pollo" data-price="5500">
+            <img src="https://source.unsplash.com/400x300/?grilled-chicken" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Medio Pollo</h5>
+              <p>CLP$ 5.500</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carnes -->
+      <h3 class="mt-5 mb-3">Carnes</h3>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="c1" data-name="Asado de Tira" data-price="12990">
+            <img src="https://source.unsplash.com/400x300/?beef" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Asado de Tira</h5>
+              <p>CLP$ 12.990</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="c2" data-name="Pernil de Cerdo" data-price="8990">
+            <img src="https://source.unsplash.com/400x300/?pork" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Pernil de Cerdo</h5>
+              <p>CLP$ 8.990</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empanadas -->
+      <h3 class="mt-5 mb-3">Empanadas</h3>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="e1" data-name="Empanada de Pino" data-price="1800">
+            <img src="https://source.unsplash.com/400x300/?empanadas" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Empanada de Pino</h5>
+              <p>CLP$ 1.800</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="e2" data-name="Empanada de Queso" data-price="1500">
+            <img src="https://source.unsplash.com/400x300/?cheese-pastry" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Empanada de Queso</h5>
+              <p>CLP$ 1.500</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ensaladas -->
+      <h3 class="mt-5 mb-3">Ensaladas</h3>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="s1" data-name="Ensalada Chilena" data-price="2500">
+            <img src="https://source.unsplash.com/400x300/?salad" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Ensalada Chilena</h5>
+              <p>CLP$ 2.500</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="s2" data-name="Ensalada César" data-price="3500">
+            <img src="https://source.unsplash.com/400x300/?caesar-salad" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Ensalada César</h5>
+              <p>CLP$ 3.500</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Postres -->
+      <h3 class="mt-5 mb-3">Postres</h3>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="d1" data-name="Torta de Chocolate" data-price="3500">
+            <img src="https://source.unsplash.com/400x300/?cake" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Torta de Chocolate</h5>
+              <p>CLP$ 3.500</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="d2" data-name="Flan Casero" data-price="2800">
+            <img src="https://source.unsplash.com/400x300/?flan" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Flan Casero</h5>
+              <p>CLP$ 2.800</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bebidas -->
+      <h3 class="mt-5 mb-3">Bebidas</h3>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="b1" data-name="Bebida 1.5L" data-price="1500">
+            <img src="https://source.unsplash.com/400x300/?soda" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Bebida 1.5L</h5>
+              <p>CLP$ 1.500</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card product-card h-100" data-id="b2" data-name="Cerveza" data-price="2000">
+            <img src="https://source.unsplash.com/400x300/?beer" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Cerveza</h5>
+              <p>CLP$ 2.000</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Combos -->
+      <h3 class="mt-5 mb-3">Combos</h3>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card product-card h-100" data-id="cb1" data-name="Combo Familiar" data-price="21990">
+            <img src="https://source.unsplash.com/600x300/?chicken-meal" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Combo Familiar</h5>
+              <p>2 pollos + papas fritas + ensalada<br>CLP$ 21.990</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card product-card h-100" data-id="cb2" data-name="Promo Empanadas" data-price="15000">
+            <img src="https://source.unsplash.com/600x300/?empanada-set" class="card-img-top">
+            <div class="card-body text-center">
+              <h5>Promo Empanadas</h5>
+              <p>10 empanadas surtidas<br>CLP$ 15.000</p>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-sm btn-primary add-to-cart">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Delivery -->
+  <section id="delivery" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title">Delivery</h2>
+      <p>Delivery todos los días de 12:00 a 23:00 hrs. Pide en línea o por teléfono.</p>
+      <a href="#contacto" class="btn btn-success">Haz tu pedido</a>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Contáctanos</h2>
+      <form class="w-75 mx-auto">
+        <div class="mb-3"><label class="form-label">Nombre</label><input type="text" class="form-control" required></div>
+        <div class="mb-3"><label class="form-label">Correo</label><input type="email" class="form-control" required></div>
+        <div class="mb-3"><label class="form-label">Mensaje</label><textarea class="form-control" rows="4" required></textarea></div>
+        <button type="submit" class="btn btn-warning">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 La Rotisería - Todos los derechos reservados.</p>
+    <div>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title">Iniciar Sesión</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3"><label class="form-label">Usuario</label><input id="userInput" type="text" class="form-control" required></div>
+            <div class="mb-3"><label class="form-label">Contraseña</label><input id="passInput" type="password" class="form-control" required></div>
+            <div class="d-flex justify-content-end"><button type="submit" class="btn btn-warning">Entrar</button></div>
+          </form>
+          <small class="text-muted d-block mt-2">Tip: para demo usa usuario <code>cliente</code> y contraseña <code>1234</code></small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas" aria-labelledby="cartLabel">
+    <div class="offcanvas-header">
+      <h5 id="cartLabel">Tu Carrito</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartItems" class="mb-3"></div>
+      <div class="mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <strong>Total:</strong><span id="cartTotal">CLP$ 0</span>
+        </div>
+        <button id="checkoutBtn" class="btn btn-success w-100 mb-2">Pagar</button>
+        <button id="clearCartBtn" class="btn btn-outline-danger w-100">Vaciar Carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

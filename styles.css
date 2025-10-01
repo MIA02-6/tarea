@@ -1,0 +1,22 @@
+body {font-family: 'Montserrat', sans-serif;margin-top: 70px;}
+.section-title {text-align: center;font-weight: 600;margin-bottom: 2rem;}
+.navbar {background-color: #fff;}
+.navbar .nav-link {color: #333 !important;margin-left: 15px;}
+.navbar .nav-link:hover {color: #f39c12 !important;}
+.hero {height: 90vh;background: url('https://source.unsplash.com/1600x900/?rotisserie,food') center/cover no-repeat;
+  color: white;display: flex;align-items: center;}
+.hero h1 {font-size: 3rem;font-weight: bold;}
+.hero p {font-size: 1.25rem;}
+.product-card img {height: 200px;object-fit: cover;}
+footer {background: #333;color: white;text-align: center;padding: 20px;}
+footer a {color: white;margin: 0 10px;font-size: 1.2rem;}
+footer a:hover {color: #f39c12;}
+
+/* Small tweaks for add-to-cart buttons */
+.add-to-cart {width: 100%}
+
+/* Offcanvas/cart styles adjustments */
+.offcanvas-body {min-height: 300px;}
+.cart-item {border-bottom: 1px solid #eee;padding: 10px 0;}
+.cart-item .item-controls {font-size: 0.9rem;}
+.badge-cart-count {position: absolute;top: -6px;right: -6px;}
